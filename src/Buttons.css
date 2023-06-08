@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.banana-div {
+  margin: auto 35rem auto 25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
