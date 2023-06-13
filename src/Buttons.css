@@ -4,9 +4,24 @@
   align-items: center;
   justify-content: space-around;
 }
+.oppa-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
 .banana-div {
   margin: auto 35rem auto 25rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+#singerFrame {
+  position: absolute;
+}
+
+#thesinger {
+  resize: none;
 }

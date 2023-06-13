@@ -44,15 +44,25 @@ export default function Buttons() {
   return (
     <>
       <div className="container">
-        <div className="oppa-div">
-          <button onClick={newSong}>AA</button>
-          <iframe width="420" height="315" src={singer}></iframe>
+        <div className="oppa-div oppaStack">
+          <button onClick={newSong}>▶️</button>
+          <iframe
+            id="singerFrame"
+            width="100"
+            height="100"
+            src={singer}
+          ></iframe>
+          <img src="src\assets\eyeLeft.jpg" alt="eyeLeft" width={200} />
+          <img src="src\assets\mouth.jpg" alt="mouth" width={200} />
+          <img src="src\assets\eyeRight.jpg" alt="eyeRight" width={200} />
           <textarea
             name="singer"
             id="thesinger"
-            cols="1"
-            rows="1"
+            cols="5"
+            rows="5"
             ref={urlHere}
+            width={50}
+            height={37}
           ></textarea>
         </div>
         <div className="banana-div">
