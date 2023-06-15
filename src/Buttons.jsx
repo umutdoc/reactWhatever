@@ -7,6 +7,8 @@ export default function Buttons() {
     "https://www.youtube.com/embed/jNQXAC9IVRw"
     //https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed
   );
+  const [unlocked, setUnlocked] = React.useState(false);
+  const [btnSmash, setBtnSmash] = React.useState(0);
   const urlHere = React.useRef();
   function newSong() {
     let raw = urlHere.current.value;
@@ -41,6 +43,14 @@ export default function Buttons() {
   function bananaReset() {
     setBanana(132);
   }
+  function smash() {
+    if (btnSmash < 60) {
+      setBtnSmash(btnSmash + 1);
+    } else {
+      setUnlocked(true);
+    }
+  }
+
   return (
     <>
       <div className="container">
@@ -77,6 +87,18 @@ export default function Buttons() {
           <button onClick={bananaShrink}>Shrink</button>
           <button onClick={bananaGrow}>Grow</button>
           <button onClick={bananaReset}>RESET!!!</button>
+        </div>
+        <div className="beatToUnlock">
+          <span>
+            hit the button 60 times in 60 seconds to unlock the picture
+          </span>
+          <button onClick={smash}>SMASH!!!</button>
+          <img
+            src="src\assets\banana.jpg"
+            alt="banana"
+            style={unlocked ? {} : { filter: "blur(1.5rem)" }}
+            width={300}
+          />
         </div>
       </div>
     </>
