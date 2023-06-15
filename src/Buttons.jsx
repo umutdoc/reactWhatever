@@ -9,6 +9,8 @@ export default function Buttons() {
   );
   const [unlocked, setUnlocked] = React.useState(false);
   const [btnSmash, setBtnSmash] = React.useState(0);
+  const [lolOne, setlolOne] = React.useState(0);
+
   const urlHere = React.useRef();
   function newSong() {
     let raw = urlHere.current.value;
@@ -41,14 +43,26 @@ export default function Buttons() {
     console.log("HI" + p);
   }
   function bananaReset() {
+    console.log("unlocked: " + unlocked + "lolOne: " + lolOne);
     setBanana(132);
+    if (unlocked === true && lolOne === 0) {
+      setlolOne(1);
+    }
+    setUnlocked(false);
+    setBtnSmash(0);
+    console.log("unlocked: " + unlocked + "lolOne: " + lolOne);
   }
   function smash() {
+    console.log("unlocked: " + unlocked + "lolOne: " + lolOne);
     if (btnSmash < 60) {
       setBtnSmash(btnSmash + 1);
     } else {
       setUnlocked(true);
+      if (lolOne === 1) {
+        setlolOne(2);
+      }
     }
+    console.log("unlocked: " + unlocked + "lolOne: " + lolOne);
   }
 
   return (
@@ -90,15 +104,36 @@ export default function Buttons() {
         </div>
         <div className="beatToUnlock">
           <span>
-            hit the button 60 times in 60 seconds to unlock the picture
+            hit the button 60 times to unlock the picture {60 - btnSmash}
           </span>
-          <button onClick={smash}>SMASH!!!</button>
-          <img
-            src="src\assets\banana.jpg"
-            alt="banana"
-            style={unlocked ? {} : { filter: "blur(1.5rem)" }}
-            width={300}
-          />
+          <button onClick={unlocked === false && smash} disabled={unlocked}>
+            SMASH!!!
+          </button>
+
+          {lolOne === 1 ? (
+            unlocked ? (
+              <img
+                src="src\assets\banana.jpg"
+                alt="banana"
+                style={unlocked ? {} : { filter: "blur(1.5rem)" }}
+                width={300}
+              />
+            ) : (
+              <img
+                src="src\assets\mouth.jpg"
+                alt="mouth"
+                style={unlocked ? {} : { filter: "blur(1.5rem)" }}
+                width={200}
+              />
+            )
+          ) : (
+            <img
+              src="src\assets\banana.jpg"
+              alt="banana"
+              style={unlocked ? {} : { filter: "blur(1.5rem)" }}
+              width={300}
+            />
+          )}
         </div>
       </div>
     </>
