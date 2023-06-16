@@ -102,13 +102,14 @@ export default function Buttons() {
           <button onClick={bananaGrow}>Grow</button>
           <button onClick={bananaReset}>RESET!!!</button>
         </div>
-        <div className="beatToUnlock">
-          <span>
-            hit the button 60 times to unlock the picture {60 - btnSmash}
-          </span>
-          <button onClick={unlocked === false && smash} disabled={unlocked}>
-            SMASH!!!
-          </button>
+        <div className="unlock-div">
+          <div className="unlock-text">
+            <span>hit the button 60 times to unlock the picture</span>
+            <p> {60 - btnSmash}</p>
+            <button onClick={unlocked === false && smash} disabled={unlocked}>
+              SMASH!!!
+            </button>
+          </div>
 
           {lolOne === 1 ? (
             unlocked ? (
@@ -116,7 +117,7 @@ export default function Buttons() {
                 src="src\assets\banana.jpg"
                 alt="banana"
                 style={unlocked ? {} : { filter: "blur(1.5rem)" }}
-                width={300}
+                width={200}
               />
             ) : (
               <img
@@ -131,7 +132,7 @@ export default function Buttons() {
               src="src\assets\banana.jpg"
               alt="banana"
               style={unlocked ? {} : { filter: "blur(1.5rem)" }}
-              width={300}
+              width={200}
             />
           )}
         </div>
