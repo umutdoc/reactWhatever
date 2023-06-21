@@ -68,6 +68,9 @@ export default function Buttons() {
   return (
     <>
       <div className="container">
+        <div id="container-scroll-up">
+          <div id="scroll-text-up"> TEST TEST TEST TEST</div>
+        </div>
         <div className="oppa-div oppaStack">
           <button onClick={newSong}>▶️</button>
           <iframe
