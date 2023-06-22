@@ -29,11 +29,18 @@
   justify-content: space-around;
 }
 #container-scroll-up {
+  z-index: 5;
+  transform: rotate(45deg);
   border: 1px solid black;
   border-radius: 5px;
   overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 #scroll-text-up {
+  background-blend-mode: normal black;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
