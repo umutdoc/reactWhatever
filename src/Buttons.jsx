@@ -64,12 +64,34 @@ export default function Buttons() {
     }
     console.log("unlocked: " + unlocked + "lolOne: " + lolOne);
   }
+  let setsVar = 0;
+  const setS = [
+    "Veni, vidi, vici.",
+    "Alea iacta est.",
+    "Carpe diem.",
+    "Cogito, ergo sum.",
+    "In vino veritas.",
+    "Acta, non verba.",
+    "Carthago delenda est.",
+  ];
+
+  function increment() {
+    if (setsVar < 6) {
+      setsVar++;
+    } else {
+      setsVar = 0;
+    }
+
+    //increase by 1
+    document.getElementById("scroll-text-up").innerHTML = setS[setsVar]; //set span value
+  }
+  setInterval(increment, 13000); //1000ms in 1 sec
 
   return (
     <>
       <div className="container">
         <div id="container-scroll-up">
-          <div id="scroll-text-up"> TEST TEST TEST TEST</div>
+          <div id="scroll-text-up">{setS[setsVar]}</div>
         </div>
         <div className="oppa-div oppaStack">
           <button onClick={newSong}>▶️</button>

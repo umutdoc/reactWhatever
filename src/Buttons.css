@@ -30,14 +30,14 @@
 }
 #container-scroll-up {
   z-index: 5;
-  transform: rotate(45deg);
+  transform: rotate(5deg);
   border: 1px solid black;
   border-radius: 5px;
   overflow: hidden;
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 50px;
 }
 #scroll-text-up {
   background-blend-mode: normal black;
@@ -45,28 +45,8 @@
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 
-  -moz-animation: my-animation 15s linear infinite;
-  -webkit-animation: my-animation 15s linear infinite;
-  animation: my-animation 15s linear infinite;
-}
-/* Firefox */
-@-moz-keyframes my-animation {
-  from {
-    -moz-transform: translateX(100%);
-  }
-  to {
-    -moz-transform: translateX(-100%);
-  }
-}
-
-/* Google Chrome */
-@-webkit-keyframes my-animation {
-  from {
-    -webkit-transform: translateX(100%);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-  }
+  -moz-animation: my-animation 13s linear infinite;
+  -webkit-animation: my-animation 13s linear infinite;
 }
 
 @keyframes my-animation {
@@ -75,12 +55,14 @@
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
+
   to {
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 }
+
 #singerFrame {
   position: absolute;
 }
