@@ -101,9 +101,9 @@ export default function Buttons() {
             height="100"
             src={singer}
           ></iframe>
-          <img src="public\assets\eyeLeft.jpg" alt="eyeLeft" width={200} />
-          <img src="public\assets\mouth.jpg" alt="mouth" width={200} />
-          <img src="public\assets\eyeRight.jpg" alt="eyeRight" width={200} />
+          <img src="assets/eyeLeft.jpg" alt="eyeLeft" width={200} />
+          <img src="assets/mouth.jpg" alt="mouth" width={200} />
+          <img src="assets/eyeRight.jpg" alt="eyeRight" width={200} />
           <textarea
             name="singer"
             id="thesinger"
@@ -118,7 +118,7 @@ export default function Buttons() {
           <p>Use these buttons to set the banana size (very important)</p>
           <img
             className="banana-img"
-            src="public\assets\banana.jpg"
+            src="assets/banana.jpg"
             width={banana}
             height={banana}
             alt=""
@@ -139,14 +139,14 @@ export default function Buttons() {
           {lolOne === 1 ? (
             unlocked ? (
               <img
-                src="public\assets\banana.jpg"
+                src="assets/banana.jpg"
                 alt="banana"
                 style={unlocked ? {} : { filter: "blur(1.5rem)" }}
                 width={200}
               />
             ) : (
               <img
-                src="public\assets\mouth.jpg"
+                src="assets/mouth.jpg"
                 alt="mouth"
                 style={unlocked ? {} : { filter: "blur(1.5rem)" }}
                 width={200}
@@ -154,7 +154,7 @@ export default function Buttons() {
             )
           ) : (
             <img
-              src="public\assets\banana.jpg"
+              src="assets/banana.jpg"
               alt="banana"
               style={unlocked ? {} : { filter: "blur(1.5rem)" }}
               width={200}
