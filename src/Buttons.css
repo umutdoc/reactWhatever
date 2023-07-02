@@ -63,6 +63,40 @@
   }
 }
 
+#container-scroll-a {
+  overflow: visible;
+  z-index: 5;
+  transform: rotate(-25deg);
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 70rem;
+  top: 0;
+}
+#scroll-text-a {
+  background-blend-mode: normal black;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation-a 6s linear infinite;
+  -webkit-animation: my-animation-a 6s linear infinite;
+}
+@keyframes my-animation-a {
+  from {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  to {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
 #singerFrame {
   position: absolute;
 }

@@ -75,7 +75,7 @@ export default function Buttons() {
     "Carthago delenda est.",
   ];
 
-  function increment() {
+  function incrementS() {
     if (setsVar < 6) {
       setsVar++;
     } else {
@@ -85,7 +85,20 @@ export default function Buttons() {
     //increase by 1
     document.getElementById("scroll-text-up").innerHTML = setS[setsVar]; //set span value
   }
-  setInterval(increment, 13000); //1000ms in 1 sec
+  setInterval(incrementS, 13000); //1000ms in 1 sec
+  let setAVar = 0;
+  const setA = ["#singer-div", "#resizebanana-div", "#hiddenbanana-div"];
+  function incrementA() {
+    if (setAVar < 2) {
+      setAVar++;
+    } else {
+      setAVar = 0;
+    }
+
+    //increase by 1
+    document.getElementById("scroll-text-a").innerHTML = setA[setAVar]; //set span value
+  }
+  setInterval(incrementA, 6000); //1000ms in 1 sec
 
   return (
     <>
@@ -93,7 +106,12 @@ export default function Buttons() {
         <div id="container-scroll-up">
           <div id="scroll-text-up">{setS[setsVar]}</div>
         </div>
-        <div className="oppa-div oppaStack">
+        <div id="container-scroll-a">
+          <div id="scroll-text-a">
+            <a href={setA[setAVar]}>Quick Scroll</a>
+          </div>
+        </div>
+        <div className="oppa-div oppaStack" id="singer-div">
           <button onClick={newSong}>▶️</button>
           <iframe
             id="singerFrame"
@@ -114,7 +132,7 @@ export default function Buttons() {
             height={37}
           ></textarea>
         </div>
-        <div className="banana-div">
+        <div className="banana-div" id="resizebanana-div">
           <p>Use these buttons to set the banana size (very important)</p>
           <img
             className="banana-img"
@@ -127,7 +145,7 @@ export default function Buttons() {
           <button onClick={bananaGrow}>Grow</button>
           <button onClick={bananaReset}>RESET!!!</button>
         </div>
-        <div className="unlock-div">
+        <div className="unlock-div" id="hiddenbanana-div">
           <div className="unlock-text">
             <span>hit the button 60 times to unlock the picture</span>
             <p> {60 - btnSmash}</p>
