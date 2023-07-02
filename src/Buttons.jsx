@@ -179,6 +179,13 @@ export default function Buttons() {
             />
           )}
         </div>
+        <div className="cube-container">
+          <div className="cube1">1</div>
+          <div className="cube2">2</div>
+          <div className="cube3">3</div>
+          <div className="cube4">4</div>
+        </div>
+        <button className="secretButton">SECRET FOUND!!</button>
       </div>
     </>
   );

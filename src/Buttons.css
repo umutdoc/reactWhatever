@@ -28,6 +28,66 @@
   align-items: center;
   justify-content: space-around;
 }
+.cube-container {
+  width: 20rem;
+  height: 20rem;
+  background: white;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  resize: vertical;
+}
+.cube-container div {
+  min-width: 20rem;
+  display: flex;
+  justify-content: center;
+  font-size: 10rem;
+  color: white;
+  scroll-snap-align: center;
+}
+.cube1 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 79%,
+    rgba(0, 212, 255, 1) 96%
+  );
+}
+.cube2 {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 9, 121, 1) 3%,
+    rgba(9, 9, 121, 1) 96%,
+    rgba(0, 212, 255, 1) 99%
+  );
+}
+.cube3 {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 9, 121, 1) 3%,
+    rgba(9, 9, 121, 1) 96%,
+    rgba(0, 212, 255, 1) 99%
+  );
+}
+.cube4 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 79%,
+    rgba(0, 212, 255, 1) 96%
+  );
+}
+.secretButton {
+  position: absolute;
+  bottom: 10px;
+  z-index: -1;
+}
 #container-scroll-up {
   z-index: 5;
   transform: rotate(5deg);
@@ -38,6 +98,7 @@
   left: 0;
   right: 0;
   top: 50px;
+  z-index: 1;
 }
 #scroll-text-up {
   background-blend-mode: normal black;
