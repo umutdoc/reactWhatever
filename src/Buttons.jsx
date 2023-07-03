@@ -95,8 +95,21 @@ export default function Buttons() {
       setAVar = 0;
     }
 
+    function setQuickscrollText() {
+      switch (setA[setAVar]) {
+        case "#singer-div":
+          return "The Singer";
+        case "#resizebanana-div":
+          return "Resize the Banana";
+        case "#hiddenbanana-div":
+          return "The Hidden Banana";
+
+        default:
+          return "😙";
+      }
+    }
     //increase by 1
-    document.getElementById("scroll-text-a").innerHTML = setA[setAVar]; //set span value
+    document.getElementById("anchor-a").innerHTML = setQuickscrollText(); //set span value
   }
   setInterval(incrementA, 6000); //1000ms in 1 sec
 
@@ -108,10 +121,12 @@ export default function Buttons() {
         </div>
         <div id="container-scroll-a">
           <div id="scroll-text-a">
-            <a href={setA[setAVar]}>Quick Scroll</a>
+            <a id="anchor-a" href="#resizebanana-div">
+              QUICK SCROLL
+            </a>
           </div>
         </div>
-        <div className="oppa-div oppaStack" id="singer-div">
+        <div className="oppa-div oppaStack main-div" id="singer-div">
           <button onClick={newSong}>▶️</button>
           <iframe
             id="singerFrame"
@@ -132,7 +147,7 @@ export default function Buttons() {
             height={37}
           ></textarea>
         </div>
-        <div className="banana-div" id="resizebanana-div">
+        <div className="banana-div main-div" id="resizebanana-div">
           <p>Use these buttons to set the banana size (very important)</p>
           <img
             className="banana-img"
@@ -145,7 +160,7 @@ export default function Buttons() {
           <button onClick={bananaGrow}>Grow</button>
           <button onClick={bananaReset}>RESET!!!</button>
         </div>
-        <div className="unlock-div" id="hiddenbanana-div">
+        <div className="unlock-div main-div" id="hiddenbanana-div">
           <div className="unlock-text">
             <span>hit the button 60 times to unlock the picture</span>
             <p> {60 - btnSmash}</p>
@@ -179,7 +194,7 @@ export default function Buttons() {
             />
           )}
         </div>
-        <div className="cube-container">
+        <div className="cube-container main-div">
           <div className="cube1">1</div>
           <div className="cube2">2</div>
           <div className="cube3">3</div>

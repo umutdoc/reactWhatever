@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: space-around;
 }
+.main-div {
+  padding-top: 25rem;
+}
 .oppa-div {
   display: flex;
   flex-direction: row;
@@ -85,7 +88,7 @@
 }
 .secretButton {
   position: absolute;
-  bottom: 10px;
+  bottom: -100rem;
   z-index: -1;
 }
 #container-scroll-up {
@@ -147,15 +150,15 @@
 }
 @keyframes my-animation-a {
   from {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-
-  to {
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
+  }
+
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 #singerFrame {
