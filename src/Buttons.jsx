@@ -201,6 +201,9 @@ export default function Buttons() {
           <div className="cube4">4</div>
         </div>
         <button className="secretButton">SECRET FOUND!!</button>
+        <h2 className="main-div">
+          Welcome to the Forest of <span id="rainbow">Animations!</span>
+        </h2>
       </div>
     </>
   );

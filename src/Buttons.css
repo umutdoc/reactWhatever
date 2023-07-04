@@ -168,3 +168,46 @@
 #thesinger {
   resize: none;
 }
+
+#rainbow {
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+  0%,
+  100% {
+  }
+  8% {
+    color: orange;
+  }
+  20% {
+    color: yellow;
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  30% {
+    color: rgb(0, 255, 0);
+  }
+  40% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: turquoise;
+  }
+  56% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: blue;
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  80% {
+    color: rgb(255, 0, 255);
+  }
+  90% {
+    color: rgb(255, 0, 127);
+  }
+}
