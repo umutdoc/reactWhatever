@@ -1,4 +1,5 @@
 import React from "react";
+import Forest from "./Forest";
 import "./Buttons.css";
 
 export default function Buttons() {
@@ -204,6 +205,9 @@ export default function Buttons() {
         <h2 className="main-div">
           Welcome to the Forest of <span id="rainbow">Animations!</span>
         </h2>
+        <div className="forest">
+          <Forest />
+        </div>
       </div>
     </>
   );
