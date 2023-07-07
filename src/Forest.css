@@ -1,0 +1,33 @@
+.ball {
+  background-color: red;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.main-div {
+  padding-top: 25rem;
+}
+
+#ball1 {
+  animation: bounce 1s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateX(-200%);
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateX(-10%);
+    transform: translateY(-10%);
+    height: 80px;
+    width: 150px;
+  }
+  50% {
+    transform: translateX(0%);
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+    transform: translateY(-100%);
+  }
+}
