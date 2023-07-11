@@ -9,9 +9,13 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
+  padding: 0;
 }
 .main-div {
   padding-top: 25rem;
+}
+.main-div.last {
+  padding-top: 13rem;
 }
 
 #ball1 {
@@ -20,6 +24,10 @@
 #ball2 {
   animation: bounce 1s linear infinite;
 }
+#ball3 {
+  animation: bounceHorizontal 1s linear infinite;
+}
+
 @keyframes bounce {
   0% {
     transform: translateX(-200%);
