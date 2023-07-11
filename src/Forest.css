@@ -16,15 +16,25 @@
     transform: translateX(-200%);
     transform: translateY(-100%);
   }
-  35% {
+  25% {
+    height: 150px;
+    width: 150px;
+  }
+  40% {
     transform: translateX(-10%);
-    transform: translateY(-10%);
-    height: 80px;
+    transform: translateY(-5%);
+    height: 100px;
     width: 150px;
   }
   50% {
     transform: translateX(0%);
     transform: translateY(0%);
+  }
+  60% {
+    transform: translateX(-80%);
+    transform: translateY(-60%);
+    height: 150px;
+    width: 150px;
   }
   100% {
     transform: translateX(-100%);
