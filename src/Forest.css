@@ -27,20 +27,6 @@
 #ball3 {
   animation: bounceHorizontal 1s linear infinite;
 }
-#ball5:hover {
-  background-color: teal;
-  animation: shake 3s linear infinite;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-550px, 0);
-  }
-}
 
 @keyframes bounce {
   0% {
